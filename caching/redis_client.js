@@ -19,7 +19,7 @@ const setData = (key, value) => {
 const getData = (key) => {
   return new Promise((resolve, reject) => {
     client.get(key, function(err, reply) {
-      if (err) return reject('Not Exist')
+      if (err) return reject({ message: 'not found' })
       return resolve(JSON.parse(reply))
     });
   })
