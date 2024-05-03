@@ -29,7 +29,7 @@ def getInstanceID():
   
 def installAgent ():
   file_name = "CyberProtect_AgentForWindows_x86_64.exe"
-  file_url = "https://download.wetransfer.com/eugv/01049b737775b3b17e3bca6c57ae6a2620240503144040/dc9acab2afb169b137c9cefe154592a2b10bb142/CyberProtect_AgentForWindows_web.exe?cf=y&token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6ImRlZmF1bHQifQ.eyJleHAiOjE3MTQ3NTIxNDgsImlhdCI6MTcxNDc1MTU0OCwiZG93bmxvYWRfaWQiOiI3OWZiNTViYS01NmRiLTQ5ZmItYjExZS1jZTJkYTI0YzBlM2YiLCJzdG9yYWdlX3NlcnZpY2UiOiJzdG9ybSJ9.nv9GGxN29Z3hC41dMSG9LqY4BiRSQl6n8l5nTFh2Z68"
+  file_url = "https://download.wetransfer.com/eugv/01049b737775b3b17e3bca6c57ae6a2620240503144040/dc9acab2afb169b137c9cefe154592a2b10bb142/CyberProtect_AgentForWindows_web.exe?cf=y&token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6ImRlZmF1bHQifQ.eyJleHAiOjE3MTQ3NTYxNTQsImlhdCI6MTcxNDc1NTU1NCwiZG93bmxvYWRfaWQiOiI0NGM4NThhZS00YmQ2LTQ4ODktYWEzZC04ZjI0ODhlNjA4NWIiLCJzdG9yYWdlX3NlcnZpY2UiOiJzdG9ybSJ9.SL_oaizmAR_qttE0VYCKqDuSnQ_Q0WBC65r2iBHy-XQ"
 
   r = requests.get(file_url, stream = True) 
 
