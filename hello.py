@@ -1,4 +1,3 @@
 print("Hello")
-print('Enter your name:')
-x = input()
+x = sys.argv[1]
 print('Hello, ' + x)
