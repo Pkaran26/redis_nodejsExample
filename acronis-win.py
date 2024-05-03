@@ -24,15 +24,16 @@ def getHost ():
     return name
   
 def getInstanceID():
-  properties = os.popen('powershell Get-ItemProperty -Path "HKLM:\SOFTWARE\Acronis\BackupAndRecovery\Settings\MachineManager"').read()
-  if properties:
-    print(properties)
-    return properties.splitlines()[2][22:]
-  else:
-    properties = os.popen('powershell Get-ItemProperty -Path "HKLM:\SOFTWARE\Acronis\BackupAndRecovery\Settings\LicenseManager"').read()
-    print(properties)
-    return properties.splitlines()[2][22:]
-
+  try:
+    properties = os.popen('powershell Get-ItemProperty -Path "HKLM:\SOFTWARE\Acronis\BackupAndRecovery\Settings\MachineManager"').read()
+    if properties:
+      return properties.splitlines()[2][22:]
+    else:
+      properties = os.popen('powershell Get-ItemProperty -Path "HKLM:\SOFTWARE\Acronis\BackupAndRecovery\Settings\LicenseManager"').read()
+      return properties.splitlines()[2][22:]
+  except:
+    print("Instance ID not found")
+    sys.exit()
 def installAgent ():
   file_name = "CyberProtect_AgentForWindows_x86_64.exe"
   file_url = "https://download.wetransfer.com/eugv/01049b737775b3b17e3bca6c57ae6a2620240503144040/dc9acab2afb169b137c9cefe154592a2b10bb142/CyberProtect_AgentForWindows_web.exe?cf=y&token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6ImRlZmF1bHQifQ.eyJleHAiOjE3MTQ3NTIxNDgsImlhdCI6MTcxNDc1MTU0OCwiZG93bmxvYWRfaWQiOiI3OWZiNTViYS01NmRiLTQ5ZmItYjExZS1jZTJkYTI0YzBlM2YiLCJzdG9yYWdlX3NlcnZpY2UiOiJzdG9ybSJ9.nv9GGxN29Z3hC41dMSG9LqY4BiRSQl6n8l5nTFh2Z68"
