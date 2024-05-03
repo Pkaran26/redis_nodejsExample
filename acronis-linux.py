@@ -34,7 +34,7 @@ def getInstanceID():
 
 def installAgent ():
   file_name = "CyberProtect_AgentForLinux_x86_64.bin"
-  file_url = "https://download.wetransfer.com/eugv/ffc2a37ff4c0931553a6f7d5c9fb848720240503131601/bda88f1f5e29bb8974b04736fe743235008a02f9/CyberProtect_AgentForLinux_x86_64.bin?cf=y&token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6ImRlZmF1bHQifQ.eyJleHAiOjE3MTQ3NDMxNzMsImlhdCI6MTcxNDc0MjU3MywiZG93bmxvYWRfaWQiOiJkNDBhMWVkZi03Mjk5LTRmMWMtYjhmNC1lODEwYjliZmU4YWUiLCJzdG9yYWdlX3NlcnZpY2UiOiJzdG9ybSJ9.R9jgmhkEI9IqjeoPEkU1SXnY8ddOw0ngRuadWZvxueI"
+  file_url = "https://download.wetransfer.com/eugv/ffc2a37ff4c0931553a6f7d5c9fb848720240503131601/bda88f1f5e29bb8974b04736fe743235008a02f9/CyberProtect_AgentForLinux_x86_64.bin?cf=y&token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6ImRlZmF1bHQifQ.eyJleHAiOjE3MTQ3NDQ1MTYsImlhdCI6MTcxNDc0MzkxNiwiZG93bmxvYWRfaWQiOiIyODE3ODVmMC01NjBiLTQzMmEtOGNkZS1hZWM0Mzk3ZWI1MWYiLCJzdG9yYWdlX3NlcnZpY2UiOiJzdG9ybSJ9.V36nmxmuNZhkE8EzY84IN2Z4UrgrowXed9-ztseBMMI"
 
   r = requests.get(file_url, stream = True) 
 
