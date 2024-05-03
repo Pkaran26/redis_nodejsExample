@@ -25,7 +25,13 @@ def getHost ():
   
 def getInstanceID():
   properties = os.popen('powershell Get-ItemProperty -Path "HKLM:\SOFTWARE\Acronis\BackupAndRecovery\Settings\MachineManager"').read()
-  return properties.splitlines()[2][22:]
+  if properties:
+    print(properties)
+    return properties.splitlines()[2][22:]
+  else:
+    properties = os.popen('powershell Get-ItemProperty -Path "HKLM:\SOFTWARE\Acronis\BackupAndRecovery\Settings\LicenseManager"').read()
+    print(properties)
+    return properties.splitlines()[2][22:]
 
 def installAgent ():
   file_name = "CyberProtect_AgentForWindows_x86_64.bin"
