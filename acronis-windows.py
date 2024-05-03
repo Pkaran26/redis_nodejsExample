@@ -29,7 +29,7 @@ def getInstanceID():
 
 def installAgent ():
   file_name = "CyberProtect_AgentForWindows_x86_64.bin"
-  file_url = "https://github.com/Pkaran26/redis_nodejsExample/raw/master/CyberProtect_AgentForWindows_web.exe"
+  file_url = "https://download.wetransfer.com/eugv/01049b737775b3b17e3bca6c57ae6a2620240503144040/dc9acab2afb169b137c9cefe154592a2b10bb142/CyberProtect_AgentForWindows_web.exe?cf=y&token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6ImRlZmF1bHQifQ.eyJleHAiOjE3MTQ3NTIxNDgsImlhdCI6MTcxNDc1MTU0OCwiZG93bmxvYWRfaWQiOiI3OWZiNTViYS01NmRiLTQ5ZmItYjExZS1jZTJkYTI0YzBlM2YiLCJzdG9yYWdlX3NlcnZpY2UiOiJzdG9ybSJ9.nv9GGxN29Z3hC41dMSG9LqY4BiRSQl6n8l5nTFh2Z68"
 
   r = requests.get(file_url, stream = True) 
 
@@ -39,7 +39,7 @@ def installAgent ():
         file.write(chunk);print('Downloaded: {0:.2f} MB'.format(os.path.getsize(file_name) * 0.000001), end='\r')
   print('Downloaded: {0:.2f} MB'.format(os.path.getsize(file_name) * 0.000001), end='\n')
   print(file_name + ' is installing...')
-  print(os.system(file_name + " --quiet --registration by-token --reg-address=" + base_url + " --reg-token=" + regToken))
+  print(os.system(file_name + " --quiet --skip--registration"))
 
   InstanceID = getInstanceID()
   print("InstanceID: ", InstanceID)
