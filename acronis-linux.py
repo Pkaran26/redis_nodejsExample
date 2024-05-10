@@ -9,6 +9,7 @@ headers = {
 }
 
 regToken = sys.argv[1] #registration token 
+management_url = "https://in01-cloud.acronis.com"
 
 if regToken == None:
   print('Registration token is required')
@@ -45,7 +46,7 @@ def installAgent ():
   #print('Downloaded: {0:.2f} MB'.format(os.path.getsize(file_name) * 0.000001), end='\n')
   print(file_name + ' is installing...')
   print(os.system("sudo chmod +x ./" + file_name))
-  print(os.system("sudo ./" + file_name + " -a --skip-registration"))
+  print(os.system("sudo ./" + file_name + " -a --rain=" + management_url + " --token=" + regToken))
 
   InstanceID = getInstanceID()
   print("InstanceID: ", InstanceID)
